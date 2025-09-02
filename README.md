@@ -5,7 +5,7 @@
 ### **Exploración de datos**
 <br>
 
-1.- ¿Cuál es el total de remesas recibidas en México en 2024?
+1.- [¿Cuál es el total de remesas recibidas en México en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L48-L51)
 ```sql
 SELECT 
 	FORMAT(SUM(Total),2) AS 'Remesas 2024' 
