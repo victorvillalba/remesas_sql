@@ -15,7 +15,7 @@ WHERE YEAR(Fecha) = 2024;
 El total de remesas que arribaron a México en 2024 alcanza al cifra de 64,746.38 millones de dolares.
 <br>
 
-2.- ¿Cuáles son los 5 estados que más remesas recibieron en 2024 en promedio?
+2.- [¿Cuáles son los 5 estados que más remesas recibieron en 2024 en promedio?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L54-L61)
 ```sql
 SELECT 
        Estado, 
@@ -29,7 +29,7 @@ LIMIT 5;
 Los estados que más volumen de remesas recibieron en 2024 en promedio fueron Guanajuato, Jalisco y Michoacán.
 
 <br>
-3.- ¿Cuál es el estado con menor recepción de remesas en 2024?
+3.- [¿Cuál es el estado con menor recepción de remesas en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L64-L71)
 
 ```sql
 SELECT 
@@ -43,7 +43,7 @@ LIMIT 1;
 ```
 El estado que menor cantidad de remesas recibió en 2024 fue Baja California Sur.
 <br>
-4.- ¿Cuál fue el promedio mensual de remesas de todo el país en 2024?
+4.- [¿Cuál fue el promedio mensual de remesas de todo el país en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L74-L77)
 
 ```sql
 SELECT 
@@ -53,7 +53,7 @@ WHERE YEAR(Fecha) = 2024;
 ```
 El promedio mensual de remesas que llegaron a México en 2024 alcanzó la cifra de 5,595.53 millones de dólares.
 <br>
-5.- ¿Cuál es la tendencia anual de las remesas en México?
+5.- [¿Cuál es la tendencia anual de las remesas en México?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L80-L92)
 
 ```sql
 WITH cte AS(SELECT 
@@ -74,7 +74,7 @@ Es fácil observar que, en general, la tendencia anual de las remesas en México
 ### **Comparaciones y tendencias**
 
 <br>
-6.- ¿Qué estados tuvieron el mayor crecimiento anual  de remesas entre 2023 y 2024 en términos porcentuales?
+6.- [¿Qué estados tuvieron el mayor crecimiento anual  de remesas entre 2023 y 2024 en términos porcentuales?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L95-L117)
 
 ```sql
 WITH cte AS (SELECT 
@@ -104,7 +104,7 @@ ORDER BY crecimiento_porcentual DESC;
 De acuerdo con los resultados arrojados por la consulta, fueron la Ciudad de México (21.12%), Puebla (7.05%) y Oaxaca (6.83%) los estados que mayor crecimiento anual de remesas presentaron en terminos porcentuales.
 
 <br>
-7.- ¿Cuál es la participación porcentual de cada estado en el total nacional de remesas en 2024?
+7.- [¿Cuál es la participación porcentual de cada estado en el total nacional de remesas en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L120-L132)
 
 ```sql
 WITH cte AS (SELECT 
@@ -125,7 +125,7 @@ La consulta muestra que los estados que mayor participación tuvieron en el volu
 
 <br>
 
-8.- ¿Cuál es el mes que historicamente se caracteriza por ser el de mayor recepción de remesas?
+8.- [¿Cuál es el mes que historicamente se caracteriza por ser el de mayor recepción de remesas?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L135-L147)
 
 ```sql
 WITH remesas_mensuales AS(
@@ -147,7 +147,7 @@ El mes que históricamente se caracteriza por ser el de mayor recepción de reme
 
 ### **Análisis con ventanas y cruces**
 
-9.- ¿Cuál es la tasa de crecimiento trimestral de remesas en cada estado?
+9.- [¿Cuál es la tasa de crecimiento trimestral de remesas en cada estado?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L150-L156)
 
 ```sql
 SELECT 
@@ -161,7 +161,7 @@ La consulta refleja los crecimientos o los decrecimientos en los flujos de remes
 
 <br>
 
-10.- ¿Qué estados presentaron mayor volatilidad en los últimos 10 años?
+10.- [¿Qué estados presentaron mayor volatilidad en los últimos 10 años?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L159-L166)
 ```sql
 SELECT
        Estado,
@@ -175,7 +175,7 @@ LIMIT 10;
 Los 10 estados que mpas volatilidad presentaron en el volumen de remesas que percibió fueron Chiapas, Jalisco, Guanajuato, Ciudad de México, Michoacán,Estado de México, Guerrero, Oaxaca, Puebla y Veracruz.
 <br>
 
-11.- ¿Cómo ha cambiado la concentración de remesas a lo largo de los años?
+11.- [¿Cómo ha cambiado la concentración de remesas a lo largo de los años?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L169-L191)
 ```sql
 WITH cte AS (SELECT 
                      YEAR(Fecha) as anio,
@@ -203,7 +203,7 @@ ORDER BY anio, porcentaje_total DESC;
 ```
 En general los tres estados que más volumen de remesas concentraron fueron Guanajuato, Jalisco y Michoacán.
 <br>
-12.- Si agrupamos por regiones (Norte, Centro, Sur, Occidente), ¿qué región recibió más remesas en 2024?
+12.- [Si agrupamos por regiones (Norte, Centro, Sur, Occidente), ¿qué región recibió más remesas en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L193-L206)
 
 ```sql
 SELECT
