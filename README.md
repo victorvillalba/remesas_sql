@@ -29,6 +29,7 @@ LIMIT 5;
 Los estados que más volumen de remesas recibieron en 2024 en promedio fueron Guanajuato, Jalisco y Michoacán.
 
 <br>
+
 3.- [¿Cuál es el estado con menor recepción de remesas en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L64-L71)
 
 ```sql
@@ -74,6 +75,7 @@ Es fácil observar que, en general, la tendencia anual de las remesas en México
 ### **Comparaciones y tendencias**
 
 <br>
+
 6.- [¿Qué estados tuvieron el mayor crecimiento anual  de remesas entre 2023 y 2024 en términos porcentuales?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L95-L117)
 
 ```sql
@@ -104,6 +106,7 @@ ORDER BY crecimiento_porcentual DESC;
 De acuerdo con los resultados arrojados por la consulta, fueron la Ciudad de México (21.12%), Puebla (7.05%) y Oaxaca (6.83%) los estados que mayor crecimiento anual de remesas presentaron en terminos porcentuales.
 
 <br>
+
 7.- [¿Cuál es la participación porcentual de cada estado en el total nacional de remesas en 2024?](https://github.com/victorvillalba/remesas_sql/blob/9298384a937b77d1385af1a4cb795c015dedd788/scripts/remesas_mexico.sql#L120-L132)
 
 ```sql
